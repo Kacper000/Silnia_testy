@@ -1,8 +1,13 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 
 class SilniaTest {
 
+    @Test
+    public void  test1 () {
+        Silnia liczba =new Silnia (3);
+        Assertions.assertEquals(liczba.ObliczSilnia(),6 );
+
+    }
 }
