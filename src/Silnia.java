@@ -16,20 +16,15 @@ public class Silnia {
 
     /*POZDRO 600*/
 
-    Double ObliczSilnia(){
-        double X=0;
-        double j=0;
-            while(j<liczba) {
-                j++;
-                if (liczba == j) {
-                    for (double i = 1; i <= liczba; i++) {
-                        liczba = liczba * i;
-                    }
-                    return liczba ;
-                }
-                if(liczba<j)
-                    return X;
-            }
-            return X ;
+    double ObliczSilnia(double liczba) {
+
+        if (liczba > 0) {
+            return liczba*ObliczSilnia(liczba-1);
+        }
+        else if( liczba==0)
+            return Double.valueOf(1);
+        else
+            return Double.valueOf(0);
+
     }
 }
